@@ -1,0 +1,28 @@
+<%
+  const activePage = typeof active !== "undefined" ? active : "home";
+  const navItems = [
+    { label: "Home", href: "/", key: "home" },
+    { label: "Projects", href: "/projects", key: "projects" },
+    { label: "Learnings", href: "/learnings", key: "learnings" },
+    { label: "Careers", href: "/careers", key: "careers" },
+    { label: "Side Hobby & Jobs", href: "/side-hobby-jobs", key: "side-hobby-jobs" },
+  ];
+%>
+
+<header class="topbar">
+  <div class="brand-wrap">
+    <nav class="nav-links" aria-label="Primary navigation">
+      <% navItems.forEach((item) => { %>
+        <a class="<%= activePage === item.key ? 'is-active' : '' %>" href="<%= item.href %>">
+          <%= item.label %>
+        </a>
+      <% }) %>
+    </nav>
+  </div>
+
+  <div class="topbar-actions">
+    <a class="icon-link" href="#" aria-label="Search">⌕</a>
+    <a class="icon-link" href="#" aria-label="Bag">◫</a>
+    <a class="icon-link" href="#" aria-label="Favorites">♡</a>
+  </div>
+</header>

@@ -14,27 +14,22 @@
   </head>
   <body>
     <div class="page-shell">
-      <section class="hero-card hero-card-home">
-        <%- include("components/navbar", { active: typeof active !== "undefined" ? active : "home" }) %>
+      <section class="hero-card">
+        <%- include("components/navbar", { active: typeof active !== "undefined" ? active : "careers" }) %>
 
-        <div class="hero-content hero-content-home">
-          <div class="hero-copy hero-copy-home">
-            <div class="hero-pill-row">
-              <span class="pill pill-home">Created From 20 April 2026</span>
-            </div>
-  
-            <h2 class="hero-heading">
-              <span>Personal Growth</span>
-              <span>Blogs</span>
-            </h2>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="pill">Created From 20 April 2026</span>
+            <h2>PERSONAL </h2>
+            <h2>DEVELOPMENT</h2>
+            <h2>BLOGS</h2>
             <p>
-              A home for the things Jonathan is building, learning, and figuring
-              out in public, from hands-on projects and study notes to career
-              reflections and side hobbies that shape the bigger picture.
+              A bunch of blogs related to Jonathan's personal growth, either it's project, learning process and Jonathan's Career
+
             </p>
             <div class="tech-stack" aria-label="Featured tech stack">
               <span class="stack-label">Covered Topics</span>
-              <div class="stack-icons stack-icons-home">
+              <div class="stack-icons">
                 <span class="stack-chip">
                   <img
                     class="icon-invert"
@@ -69,63 +64,19 @@
                 </span>
               </div>
             </div>
-            <div class="hero-actions hero-actions-home">
-              <a class="hero-cta hero-cta-primary" href="#recent-blogs">Read Latest Posts</a>
+            <div class="hero-actions">
+              <a class="hero-cta" href="#">Discover more</a>
             </div>
           </div>
 
-          <div class="hero-visual hero-visual-home">
-            <div class="hero-portrait-shell">
-              <div class="hero-title-backdrop hero-title-backdrop-home" aria-hidden="true">
-                Jonathan Putra
-              </div>
-              <div class="hero-description-group-home" aria-hidden="true">
-                <p class="hero-description-backdrop-home hero-description-role-home">Golang Backend Developer at Kompas Gramedia</p>
-              </div>
-              
+          <div class="hero-visual">
             <img
-              class="hero-model hero-model-home"
+              class="hero-model"
               src="/images/jumbotron.png"
               alt="Futuristic hero model"
             />
-              <aside class="hero-stats-panel" aria-label="Profile stats">
-                <div class="hero-stats-topline">
-                  <span class="hero-stats-kicker">Current Status</span>
-                  <span class="hero-stats-rank">Open to Opportunities</span>
-                </div>
-
-                <div class="hero-stats-group">
-
-                  <div class="hero-stat-row">
-                    <span class="hero-stat-label">Age</span>
-                    <span class="hero-stat-value">23</span>
-                  </div>
-
-                  <div class="hero-stat-row">
-                    <span class="hero-stat-label">Birth Date</span>
-                    <span class="hero-stat-value">10 July 2002</span>
-                  </div>
-
-
-                </div>
-
-                <div class="hero-stats-group">
-                
-
-                  <div class="hero-stat-row">
-                    <span class="hero-stat-label">Height</span>
-                    <span class="hero-stat-value">172 cm</span>
-                  </div>
-
-                  <div class="hero-stat-row">
-                    <span class="hero-stat-label">Weight</span>
-                    <span class="hero-stat-value">68 kg</span>
-                  </div>
-                </div>
-
-      
-              </aside>
-            </div>
+       
+             <div class="hero-title-backdrop" aria-hidden="true">Jonathan Putra</div>
           </div>
         </div>
 
@@ -133,7 +84,7 @@
       </section>
 
       <main class="content">
-        <section class="section-heading" id="recent-blogs">
+        <section class="section-heading">
           <h2>RECENT BLOGS</h2>
           <p>
             Here, we share the most recent blogs and the pinned one 

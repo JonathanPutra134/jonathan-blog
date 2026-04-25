@@ -13,13 +13,39 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "Blog Web",
     description: "Your Node.js web application is ready.",
+    active: "home",
   });
 });
 
-app.get("/", (req, res) => {
-  res.render("index", {
+app.get("/projects", (req, res) => {
+  res.render("projects", {
     title: "Blog Web",
     description: "Your Node.js web application is ready.",
+    active: "projects",
+  });
+});
+
+app.get("/learnings", (req, res) => {
+  res.render("Learnings", {
+    title: "Learnings | Blog Web",
+    description: "Learning notes, certifications, and study progress.",
+    active: "learnings",
+  });
+});
+
+app.get("/careers", (req, res) => {
+  res.render("Careers", {
+    title: "Careers | Blog Web",
+    description: "Career milestones, experience, and professional journey.",
+    active: "careers",
+  });
+});
+
+app.get("/side-hobby-jobs", (req, res) => {
+  res.render("side-hobby-jobs", {
+    title: "Side Hobby & Jobs | Blog Web",
+    description: "Side projects, hobbies, freelance work, and other activities.",
+    active: "side-hobby-jobs",
   });
 });
 
