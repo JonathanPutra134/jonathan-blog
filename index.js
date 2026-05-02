@@ -4,6 +4,8 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const blogs = require("./data/home/blogs-card.json");
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -14,11 +16,12 @@ app.get("/", (req, res) => {
     title: "Blog Web",
     description: "Your Node.js web application is ready.",
     active: "home",
+    blogs
   });
 });
 
 app.get("/projects", (req, res) => {
-  res.render("projects", {
+  res.render("projects/index", {
     title: "Blog Web",
     description: "Your Node.js web application is ready.",
     active: "projects",
@@ -26,7 +29,7 @@ app.get("/projects", (req, res) => {
 });
 
 app.get("/learnings", (req, res) => {
-  res.render("Learnings", {
+  res.render("learnings/index", {
     title: "Learnings | Blog Web",
     description: "Learning notes, certifications, and study progress.",
     active: "learnings",
@@ -34,18 +37,10 @@ app.get("/learnings", (req, res) => {
 });
 
 app.get("/careers", (req, res) => {
-  res.render("Careers", {
+  res.render("careers/index", {
     title: "Careers | Blog Web",
     description: "Career milestones, experience, and professional journey.",
     active: "careers",
-  });
-});
-
-app.get("/side-hobby-jobs", (req, res) => {
-  res.render("side-hobby-jobs", {
-    title: "Side Hobby & Jobs | Blog Web",
-    description: "Side projects, hobbies, freelance work, and other activities.",
-    active: "side-hobby-jobs",
   });
 });
 

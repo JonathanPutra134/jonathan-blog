@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title">
+  <title>Dicoding</title>
+  <rect x="4.5" y="4.5" width="15" height="15" rx="1.2" fill="#112B6B"/>
+  <path fill="#fff" d="M10.2 8.1c1.36 0 2.47 1.1 2.47 2.46 0 .9-.48 1.7-1.2 2.13.9.34 1.55 1.2 1.55 2.2 0 1.3-1.06 2.36-2.36 2.36H8.32V8.1h1.88Zm-.2 1.86v2h.23a1 1 0 1 0 0-2H10Zm0 3.72v1.7h.55a.85.85 0 1 0 0-1.7H10Z"/>
+</svg>

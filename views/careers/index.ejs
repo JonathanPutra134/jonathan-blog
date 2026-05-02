@@ -14,73 +14,9 @@
   </head>
   <body>
     <div class="page-shell">
-      <section class="hero-card">
-        <%- include("components/navbar", { active: typeof active !== "undefined" ? active : "careers" }) %>
-
-        <div class="hero-content">
-          <div class="hero-copy">
-            <span class="pill">Created From 20 April 2026</span>
-            <h2>PERSONAL </h2>
-            <h2>DEVELOPMENT</h2>
-            <h2>BLOGS</h2>
-            <p>
-              A bunch of blogs related to Jonathan's personal growth, either it's project, learning process and Jonathan's Career
-
-            </p>
-            <div class="tech-stack" aria-label="Featured tech stack">
-              <span class="stack-label">Covered Topics</span>
-              <div class="stack-icons">
-                <span class="stack-chip">
-                  <img
-                    class="icon-invert"
-                    src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/laptop.svg"
-                    alt="Projects"
-                  />
-                  <span>Projects</span>
-                </span>
-                <span class="stack-chip">
-                  <img
-                    class="icon-invert"
-                    src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/book-open.svg"
-                    alt="Learnings"
-                  />
-                  <span>Learnings</span>
-                </span>
-                <span class="stack-chip">
-                  <img
-                    class="icon-invert"
-                    src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/trending-up.svg"
-                    alt="Careers"
-                  />
-                  <span>Careers</span>
-                </span>
-                <span class="stack-chip">
-                  <img
-                    class="icon-invert"
-                    src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/dumbbell.svg"
-                    alt="Side Hobby and Jobs"
-                  />
-                  <span>Side Hobby &amp; Jobs</span>
-                </span>
-              </div>
-            </div>
-            <div class="hero-actions">
-              <a class="hero-cta" href="#">Discover more</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <img
-              class="hero-model"
-              src="/images/jumbotron.png"
-              alt="Futuristic hero model"
-            />
-       
-             <div class="hero-title-backdrop" aria-hidden="true">Jonathan Putra</div>
-          </div>
-        </div>
-
-     
+  <section class="hero-card hero-card-home hero-card-projects">
+        <%- include("../components/navbar", { active: typeof active !== "undefined" ? active : "careers" }) %>
+        <%- include("jumbotron") %>
       </section>
 
       <main class="content">

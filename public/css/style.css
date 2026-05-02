@@ -548,6 +548,130 @@ button {
   text-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
 }
 
+.hero-card-projects {
+  background:
+    radial-gradient(circle at top right, rgba(137, 240, 255, 0.14), transparent 24%),
+    radial-gradient(circle at 24% 30%, rgba(255, 223, 184, 0.08), transparent 26%),
+    linear-gradient(135deg, rgba(45, 45, 45, 0.98), rgba(56, 56, 56, 0.98));
+}
+
+.hero-content-projects {
+  align-items: center;
+}
+
+.hero-copy-projects p:not(.hero-eyebrow) {
+  max-width: 28ch;
+}
+
+.stack-icons-projects {
+  max-width: 360px;
+}
+
+.stack-icons-projects .stack-chip {
+  background: rgba(7, 12, 18, 0.58);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.career-chip-logo {
+  width: auto;
+  height: 16px;
+  max-width: 22px;
+  object-fit: contain;
+}
+
+.career-chip-logo-wide {
+  max-width: 20px;
+}
+
+.career-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 6px 14px rgba(0, 0, 0, 0.14);
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.hero-experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-experience-item:first-child {
+  padding-top: 2px;
+  border-top: 0;
+}
+
+.hero-experience-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-experience-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.hero-experience-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.hero-experience-org {
+  color: rgba(245, 248, 252, 0.96);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.hero-experience-role {
+  color: rgba(188, 204, 226, 0.74);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-experience-date {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.hero-visual-projects {
+  width: 100%;
+}
+
+.hero-portrait-shell-projects {
+  padding-right: 285px;
+}
+
+.hero-model-projects {
+  max-width: min(100%, 560px);
+  transform: translate(4px, 14px) scale(1.28);
+  transform-origin: center bottom;
+}
+
 .hero-spotlight-card,
 .hero-signature-card {
   position: absolute;
@@ -749,11 +873,74 @@ button {
   text-transform: uppercase;
 }
 
+.hero-source-heading {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.98);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.18),
+    0 0 20px rgba(255, 255, 255, 0.08);
+}
+
 .hero-stat-value {
   color: rgba(245, 248, 252, 0.94);
   font-size: 0.74rem;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.hero-source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-source-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.98);
+  color: #111827;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.1;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.hero-source-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef2f7;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.hero-source-logo {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.hero-source-logo-wordmark {
+  width: 19px;
+  height: 19px;
+}
+
+.hero-source-logo-dicoding {
+  width: 21px;
 }
 
 
@@ -863,6 +1050,7 @@ button {
 
 .post-card {
   animation: rise 0.6s ease both;
+  position: relative;
   padding: 10px;
   border: 1px solid transparent;
   border-radius: 22px;
@@ -870,6 +1058,7 @@ button {
     linear-gradient(180deg, rgba(13, 18, 28, 0.72), rgba(13, 18, 28, 0.42)) padding-box,
     linear-gradient(180deg, rgba(165, 202, 255, 0.12), rgba(165, 202, 255, 0.02)) border-box;
   box-shadow: 0 12px 38px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
 }
 
 .post-image {
@@ -887,6 +1076,125 @@ button {
   top: 12px;
   left: 12px;
   background: rgba(6, 11, 18, 0.72);
+}
+
+.pinned-post {
+  border-color: rgba(137, 240, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(16, 23, 36, 0.9), rgba(11, 16, 26, 0.96)) padding-box,
+    linear-gradient(180deg, rgba(122, 220, 255, 0.34), rgba(122, 220, 255, 0.08)) border-box;
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(146, 226, 255, 0.06),
+    0 0 34px rgba(74, 177, 255, 0.08);
+}
+
+.pinned-post::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at top left, rgba(137, 240, 255, 0.2), transparent 30%),
+    radial-gradient(circle at top right, rgba(255, 220, 163, 0.12), transparent 24%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.pinned-post::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 38px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(137, 240, 255, 0.4), rgba(137, 240, 255, 0.04));
+  box-shadow: 0 0 18px rgba(137, 240, 255, 0.2);
+  pointer-events: none;
+}
+
+.pin-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(137, 240, 255, 0.28);
+  background: linear-gradient(180deg, rgba(21, 31, 46, 0.92), rgba(12, 18, 28, 0.92));
+  color: #f0f8ff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(137, 240, 255, 0.06),
+    0 0 20px rgba(137, 240, 255, 0.16);
+}
+
+.pin-badge span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(137, 240, 255, 0.14);
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(137, 240, 255, 0.6);
+  box-shadow: 0 0 14px rgba(137, 240, 255, 0.24);
+}
+
+.pinned-post .post-image {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.26),
+    0 0 0 1px rgba(137, 240, 255, 0.04);
+}
+
+.pinned-post .post-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(137, 240, 255, 0.06), transparent 36%),
+    linear-gradient(0deg, rgba(6, 10, 17, 0.1), transparent 46%);
+  pointer-events: none;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.project-stack span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(9, 14, 22, 0.58);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  color: #ebf3ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.project-stack img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.project-stack img.icon-invert {
+  filter: invert(1) brightness(1.35);
 }
 
 .image-1 {
@@ -921,6 +1229,10 @@ button {
   letter-spacing: 0.05em;
 }
 
+.pinned-post .post-meta {
+  color: rgba(176, 194, 221, 0.88);
+}
+
 .post-card h3 {
   margin: 9px 0 8px;
   font-size: 1.45rem;
@@ -929,11 +1241,39 @@ button {
   color: #f5f9ff;
 }
 
+.pinned-post h3 {
+  color: #fbfdff;
+  text-shadow: 0 0 22px rgba(121, 197, 255, 0.08);
+}
+
 .post-card p {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.6;
+}
+
+.pinned-post p {
+  color: rgba(197, 210, 228, 0.9);
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  color: rgba(242, 247, 255, 0.92);
+  font-size: 0.98rem;
+  font-weight: 700;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.pinned-post .read-more {
+  color: #c8f6ff;
+  text-shadow: 0 0 14px rgba(137, 240, 255, 0.18);
+}
+
+.read-more:hover {
+  color: var(--accent);
 }
 
 .post-author {
@@ -1026,10 +1366,20 @@ button {
     padding-right: 250px;
   }
 
+  .hero-portrait-shell-projects {
+    padding-right: 230px;
+  }
+
   .hero-model-home {
     max-width: min(62vw, 480px);
     max-height: 540px;
     transform: translate(10px, 4px);
+  }
+
+  .hero-model-projects {
+    max-width: min(62vw, 470px);
+    max-height: 560px;
+    transform: translate(4px, 8px) scale(1.14);
   }
 
   .hero-spotlight-card {
@@ -1137,12 +1487,23 @@ button {
     border-radius: 24px;
   }
 
+  .hero-portrait-shell-projects {
+    padding-top: 118px;
+  }
+
   .hero-model-home {
     width: min(100%, 300px);
     max-width: 300px;
     max-height: 390px;
     margin-left: auto;
     transform: translate(0, 2px);
+  }
+
+  .hero-model-projects {
+    width: min(100%, 292px);
+    max-width: 292px;
+    max-height: 390px;
+    transform: translate(0, 4px) scale(1.08);
   }
 
   .hero-title-backdrop-home {
@@ -1220,8 +1581,69 @@ button {
     font-size: 0.52rem;
   }
 
+  .hero-source-heading {
+    margin-bottom: 7px;
+    font-size: 0.62rem;
+  }
+
   .hero-stat-value {
     font-size: 0.7rem;
+  }
+
+  .hero-source-list {
+    gap: 6px;
+  }
+
+  .hero-source-chip {
+    gap: 6px;
+    padding: 7px 10px;
+    font-size: 0.64rem;
+  }
+
+  .hero-source-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-source-logo {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-source-logo-wordmark {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-source-logo-dicoding {
+    width: 18px;
+  }
+
+  .hero-experience-list {
+    gap: 8px;
+  }
+
+  .hero-experience-item {
+    gap: 6px;
+    padding-top: 8px;
+  }
+
+  .hero-experience-main {
+    gap: 8px;
+  }
+
+  .hero-experience-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-experience-org {
+    font-size: 0.66rem;
+  }
+
+  .hero-experience-role,
+  .hero-experience-date {
+    font-size: 0.56rem;
   }
 
   .hero-sidecards {
