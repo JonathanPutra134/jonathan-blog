@@ -1,0 +1,50 @@
+[
+  {
+    "id": "projects-1",
+    "slug": "event-recommendation-system",
+    "title": "Event Recommendation System",
+    "category": "Projects",
+    "date": "24 Jan 2024",
+    "readTime": "10 mins read",
+    "description": "This project was my final thesis for the completion of my bachelor's degree at Universitas Multimedia Nusantara. Event-Hunters is a mock event search web application that uses a hybrid recommendation system to help users discover relevant events more effectively.",
+    "image": "/images/blogs-cover/project-1-cover.png",
+    "sections": [
+      {
+        "id": "introduction",
+        "label": "Introduction",
+        "heading": "Why this recommendation project was built",
+        "summary": "A quick overview of the thesis background, the user problem, and the goal of Event-Hunters.",
+        "image": "/images/blogs-cover/project-1-cover.png",
+        "body": [
+          "Event Recommendation System was developed as my final thesis project during my bachelor's degree at Universitas Multimedia Nusantara.",
+          "The main idea behind Event-Hunters was to build a mock event discovery platform that could reduce the effort users spend when searching through large lists of events manually.",
+          "Instead of showing the same content to everyone, the project explored how a hybrid recommendation approach could present events that feel more relevant to each individual user."
+        ]
+      },
+      {
+        "id": "main-content",
+        "label": "Main Content",
+        "heading": "How Event-Hunters approached recommendations",
+        "summary": "The core section explains the platform flow, the hybrid recommendation idea, and the product screens that supported the user journey.",
+        "image": "/images/blogs-cover/RecommendationPageResult.png",
+        "body": [
+          "The application was designed as a mock event search experience where users could browse, search, and receive recommended events based on a hybrid recommendation strategy.",
+          "This hybrid approach was chosen to balance multiple recommendation signals instead of relying on a single method, allowing the system to produce more useful suggestions for different user contexts.",
+          "From the homepage to the search and recommendation results pages, each screen was built to support a clear flow: discover events, evaluate options, and move toward more personalized recommendations."
+        ]
+      },
+      {
+        "id": "conclusion",
+        "label": "Conclusion",
+        "heading": "What this project represents in my portfolio",
+        "summary": "A short reflection on the final outcome, what I learned, and why this project remains meaningful.",
+        "image": "/images/blogs-cover/HasilAkhirRekomendasi.png",
+        "body": [
+          "This project became an important milestone in my portfolio because it combined academic research, product thinking, and practical interface design in one end-to-end case study.",
+          "Working on Event-Hunters helped me think more carefully about how recommendation logic connects with the actual experience users see on screen.",
+          "More than a thesis deliverable, the project reflects my interest in building digital products that are both technically thoughtful and genuinely helpful for users."
+        ]
+      }
+    ]
+  }
+]

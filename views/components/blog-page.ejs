@@ -1,0 +1,147 @@
+<%
+  const page = typeof blogPage !== "undefined" ? blogPage : (typeof blog !== "undefined" ? blog : {});
+  const pageTitle = page.pageTitle || page.title || "Blog Title";
+  const pageKicker = page.category
+  const pageDate = page.date || "Recently Updated";
+  const pageReadTime = page.readTime || "";
+  const pageLead = page.description || "Write a short summary that sets up the article before readers jump into the sections below.";
+  const defaultSections = [
+    {
+      id: "introduction",
+      label: "Introduction",
+      heading: "Start with the context",
+      summary: "Use this section to frame the story, the problem, and why this topic matters.",
+      image: page.image || "",
+      body: [
+        page.description || "Add a concise introduction here so readers understand the background before moving into the details."
+      ]
+    },
+    {
+      id: "main-content",
+      label: "Main Content",
+      heading: "Walk through the main idea",
+      summary: "Break down the process, decisions, implementation, or lessons in the core section.",
+      image: page.image || "",
+      body: [
+        "Use the main content section for the detailed explanation, the project flow, or the most important findings."
+      ]
+    },
+    {
+      id: "conclusion",
+      label: "Conclusion",
+      heading: "Wrap up with the takeaway",
+      summary: "Close the article with outcomes, reflections, and the next step you want readers to remember.",
+      image: page.image || "",
+      body: [
+        "End with the result, what you learned, and what comes next so the article finishes with a clear takeaway."
+      ]
+    }
+  ];
+  const incomingSections = Array.isArray(page.sections) ? page.sections.slice(0, 3) : [];
+  const sections = defaultSections.map((fallback, index) => {
+    const section = incomingSections[index] || {};
+    const body =
+      Array.isArray(section.body) ? section.body :
+      Array.isArray(section.paragraphs) ? section.paragraphs :
+      section.body ? [section.body] :
+      fallback.body;
+    return {
+      ...fallback,
+      ...section,
+      id: section.id || fallback.id,
+      label: section.label || fallback.label,
+      heading: section.heading || section.title || fallback.heading,
+      summary: section.summary || fallback.summary,
+      image: section.image || fallback.image,
+      body,
+      html: section.html || ""
+    };
+  });
+  const navSections = sections.filter((section) => section.heading);
+%>
+<article class="blog-page">
+  <header class="blog-page-header">
+    <div class="blog-page-meta-row">
+      <div class="blog-page-meta-group">
+        <span class="pill blog-page-kicker"><%= pageKicker %></span>
+        <span class="blog-page-meta">
+          <%= pageDate %>
+        </span>
+      </div>
+      <a class="blog-detail-backlink" href="/projects">Back to Projects</a>
+    </div>
+    <h1 class="blog-page-title"><%= pageTitle %></h1>
+    <div class="blog-page-header-bottom">
+      <div class="blog-page-header-copy">
+        <p class="blog-page-lead"><%= pageLead %></p>
+      </div>
+      <div class="blog-page-intro-panel">
+        <span class="blog-page-panel-label">Jump Through</span>
+        <p>
+          Tap any image card to move directly to that section. The layout supports
+          up to three story blocks at the top of the page.
+        </p>
+      </div>
+    </div>
+  </header>
+  <section class="blog-page-section-map" aria-label="Article sections">
+    <% navSections.forEach((section, index) => { %>
+      <a
+        class="blog-page-section-card <%= index === 0 ? 'is-featured' : 'is-compact' %>"
+        href="#<%= section.id %>"
+        style='<%= `--section-image: url("${section.image || page.image || ""}");` %>'
+      >
+        <span class="blog-page-section-label"><%= section.label %></span>
+        <div class="blog-page-section-content">
+          <h2><%= section.heading %></h2>
+          <p><%= section.summary %></p>
+        </div>
+        <span class="blog-page-section-action">Open Section</span>
+      </a>
+    <% }) %>
+  </section>
+  <div class="blog-page-layout">
+    <aside class="blog-page-outline">
+      <span class="blog-page-outline-label">On This Page</span>
+      <nav class="blog-page-outline-nav" aria-label="Section outline">
+        <% navSections.forEach((section, index) => { %>
+          <a href="#<%= section.id %>">
+            <span class="blog-page-outline-index">0<%= index + 1 %></span>
+            <span class="blog-page-outline-copy">
+              <strong><%= section.label %></strong>
+              <small><%= section.heading %></small>
+            </span>
+          </a>
+        <% }) %>
+      </nav>
+    </aside>
+    <div class="blog-page-content">
+      <% navSections.forEach((section) => { %>
+        <section class="blog-page-story-section" id="<%= section.id %>">
+          <div class="blog-page-story-head">
+            <span class="blog-page-story-kicker"><%= section.label %></span>
+            <h2><%= section.heading %></h2>
+            <p><%= section.summary %></p>
+          </div>
+          <% if (section.image) { %>
+            <div
+              class="blog-page-story-visual"
+              style='<%= `--section-image: url("${section.image}");` %>'
+              aria-hidden="true"
+            ></div>
+          <% } %>
+          <div class="blog-page-story-body">
+            <% section.body.forEach((paragraph) => { %>
+              <p><%= paragraph %></p>
+            <% }) %>
+            <% if (section.html) { %>
+              <div class="blog-page-story-richtext">
+                <%- section.html %>
+              </div>
+            <% } %>
+          </div>
+        </section>
+      <% }) %>
+    </div>
+  </div>
+</article>

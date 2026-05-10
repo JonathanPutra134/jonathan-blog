@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="page-shell">
-  <section class="hero-card hero-card-home hero-card-projects">
+      <section class="hero-card hero-card-home hero-card-projects">
         <%- include("../components/navbar", { active: typeof active !== "undefined" ? active : "careers" }) %>
         <%- include("jumbotron") %>
       </section>
@@ -23,7 +23,7 @@
         <section class="section-heading">
           <h2>RECENT BLOGS</h2>
           <p>
-            Here, we share the most recent blogs and the pinned one 
+            Here, we share the most recent blogs and the pinned one
           </p>
         </section>
 
@@ -34,100 +34,12 @@
             <button class="tab">Learnings</button>
             <button class="tab">Careers</button>
           </div>
-
-    
         </section>
 
         <section class="post-grid">
-          <article class="post-card pinned-post">
-            <div class="pin-badge" aria-label="Pinned post">
-              <span>⌖</span>
-              Pinned
-            </div>
-            <div class="post-image image-1">
-              <span class="pill">Destination</span>
-            </div>
-            <div class="post-meta">30 Jan 2024 • 10 mins read</div>
-            <h3>Unveiling the Secrets Beyond the Tourist Trails</h3>
-            <p>
-              Dive into the local culture, discover hidden spots, and experience
-              the authentic charm that often goes unseen.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
-
-          <article class="post-card pinned-post">
-            <div class="pin-badge" aria-label="Pinned post">
-              <span>⌖</span>
-              Pinned
-            </div>
-            <div class="post-image image-2">
-              <span class="pill">Lifestyle</span>
-            </div>
-            <div class="post-meta">29 Jan 2024 • 5 mins read</div>
-            <h3>A Fashionista's Guide to Wanderlust</h3>
-            <p>
-              Explore the intersection of fashion and travel as we delve into
-              the wardrobes of globe-trotters.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
-
-          <article class="post-card pinned-post">
-            <div class="pin-badge" aria-label="Pinned post">
-              <span>⌖</span>
-              Pinned
-            </div>
-            <div class="post-image image-3">
-              <span class="pill">Tips &amp; Hacks</span>
-            </div>
-            <div class="post-meta">26 Jan 2024 • 15 mins read</div>
-            <h3>Top 5 Apps and Gadgets That Will Transform Your Journeys</h3>
-            <p>
-              Explore the latest in travel technology with our guide to must-have
-              apps and gadgets.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
-
-          <article class="post-card">
-            <div class="post-image image-4">
-              <span class="pill">Culinary</span>
-            </div>
-            <div class="post-meta">24 Jan 2024 • 10 mins read</div>
-            <h3>Savoring Mosaic Resto Gastronomic Delights</h3>
-            <p>
-              From street food to fine dining, uncover the flavors that define a
-              destination and the stories behind them.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
-
-          <article class="post-card">
-            <div class="post-image image-5">
-              <span class="pill">Destination</span>
-            </div>
-            <div class="post-meta">20 Jan 2024 • 8 mins read</div>
-            <h3>Journey Through Time</h3>
-            <p>
-              Wander through ancient streets, visit iconic landmarks, and immerse
-              yourself in the tales that shaped them.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
-
-          <article class="post-card">
-            <div class="post-image image-6">
-              <span class="pill">Culinary</span>
-            </div>
-            <div class="post-meta">18 Jan 2024 • 6 mins read</div>
-            <h3>Experiencing Sustainable Culinary Tourism</h3>
-            <p>
-              Discover how mindful dining can support local communities while
-              offering memorable and delicious travel moments.
-            </p>
-            <a class="read-more" href="#">Read more</a>
-          </article>
+          <% blogsCareers.forEach((blog) => { %>
+            <%- include("../components/post-card", { blog }) %>
+          <% }) %>
         </section>
       </main>
     </div>

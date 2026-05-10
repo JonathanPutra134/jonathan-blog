@@ -1,12 +1,13 @@
 [
   {
-    "id": 1,
-    "title": "Savoring Mosaic Resto Gastronomic Delights",
-    "description": "From street food to fine dining, uncover the flavors that define a destination and the stories behind them.",
+    "id": "careers=1",
+    "title": "Event Recommendation System",
+    "description": "This project was my final thesis for the completion of my bachelor's degree at Universitas Multimedia Nusantara. This is a mock event search web application (Event-Hunters) serving as the platform for a hybrid recommendation system.",
     "date": "24 Jan 2024",
     "readTime": "10 mins read",
-    "image": "/images/posts/mosaic.png",
-    "slug": "savoring-mosaic-resto-gastronomic-delights",
+    "image": "/images/blogs-cover/project-1-cover.png",
+    "category": "Culinary",
+    "href": "event-recommendation-system",
     "pinned": false
   }
 ]
